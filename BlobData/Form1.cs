@@ -57,8 +57,8 @@ namespace BlobData
 
                 adapter.Fill(ds, "Mahasiswa");
                 DataRow row = ds.Tables["Mahasiswa"].NewRow();
-                row["nim"] = 1;
-                row["nama"] = "SQL";
+                row["nim"] = 6;
+                row["nama"] = "sunghanbin";
                 row["foto"] = rawdata;
                 ds.Tables["Mahasiswa"].Rows.Add(row);
                 adapter.Update(ds, "Mahasiswa");
@@ -73,7 +73,7 @@ namespace BlobData
         {
             if (textBox1.Text != "")
             {
-                string sql = "SELECT Foto FROM Mahasiswa WHERE nim='1'";
+                string sql = "SELECT Foto FROM Mahasiswa WHERE nim='6'";
                 SqlConnection connection = new SqlConnection();
                 connection.ConnectionString = connectionString;
                 connection.Open();
